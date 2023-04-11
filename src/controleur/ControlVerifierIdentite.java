@@ -12,10 +12,10 @@ public class ControlVerifierIdentite {
 
 	public boolean verifierIdentite(String nomVendeur) {
 		Gaulois g=village.trouverHabitant(nomVendeur);
-		boolean response=false;
-		if (g.equals(nomVendeur))/////proleme la 
+		boolean response=true;
+		if (g==null)////pourquoi on nous demande le chef ??
 		{
-			response=true;
+			response=false;
 		}
 		return response;
 	}
